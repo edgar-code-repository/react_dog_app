@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+THE DOG APP
+--------------------------------------------------------------------------------------------------------------------
 
-## Available Scripts
+Aplicación SPA desarrollada con React 16 y Bootstrap que recupera informacion de razas y sub-razas de perros, 
+y permite desplegar imagenes de perros correspondientes a la raza y/o sub-raza que se selecciona en la aplicacion.
 
-In the project directory, you can run:
+La aplicación utiliza axios para conectarse a una API Rest llamada "Dog API": 
 
-### `npm start`
+https://dog.ceo/dog-api/
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+--------------------------------------------------------------------------------------------------------------------
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Pantalla inicial:
 
-### `npm test`
+![Screenshot Inicial](screenshots/the_dog_app1.png)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+--------------------------------------------------------------------------------------------------------------------
 
-### `npm run build`
+Pantalla de busqueda:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Screenshot Search](screenshots/the_dog_app2.png)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Los drop down de raza y sub-raza son cargados a partir de la data obtenida desde la url:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://dog.ceo/api/breeds/list/all
 
-### `npm run eject`
+--------------------------------------------------------------------------------------------------------------------
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Busqueda por raza:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Screenshot SearchByBreed](screenshots/the_dog_app3.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+El despliegue de imagenes por raza se realiza a partir de la data obtenida desde la url:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+https://dog.ceo/api/breed/{nombre_raza}/images
 
-## Learn More
+Por ejemplo:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+https://dog.ceo/api/breed/akita/images
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Se muestran como maximo 10 imagenes de la raza seleccionada.
 
-### Code Splitting
+--------------------------------------------------------------------------------------------------------------------
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Busqueda por raza y sub-raza:
 
-### Analyzing the Bundle Size
+![Screenshot SearchBySubBreed](screenshots/the_dog_app4.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+El despliegue de imagenes por raza y sub-raza se realiza a partir de la data obtenida desde la url:
 
-### Making a Progressive Web App
+https://dog.ceo/api/breed/{nombre_raza}/{nombre_sub_raza}/images
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Por ejemplo:
 
-### Advanced Configuration
+https://dog.ceo/api/breed/bulldog/boston/images
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Se muestran como maximo 10 imagenes de la raza / sub-raza seleccionada.
 
-### Deployment
+--------------------------------------------------------------------------------------------------------------------
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Pantalla about:
 
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![Screenshot Inicial](screenshots/the_dog_app5.png)
